@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>手风琴-小企鹅Cassie</title>
+  <style>
+    body,ul,li,input {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 800px;
+      height: 400px;
+      margin: 50px auto 0;
+      border: 1px solid pink;
+    }
+    ul.img-slide{
+      width: 800px;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+    ul.img-slide>li{
+      /* float: left; */
+      height: 100%;
+    }
+
+    ul>li>input {
+      width: 100px;
+      height: 100%;
+      opacity: 0;
+      transition: .3s linear;
+    }
+    ul.img-slide>li:first-child,
+    ul.img-slide>li:first-child>.bg-img {
+      background: url(./images/1.jpg) no-repeat center/cover;
+    }
+    ul.img-slide>li:nth-child(2),
+    ul.img-slide>li:nth-child(2)>.bg-img {
+      background: url(./images/2.jpg) no-repeat center/cover;
+    }
+    ul.img-slide>li:nth-child(3),
+    ul.img-slide>li:nth-child(3)>.bg-img {
+      background: url(./images/3.jpg) no-repeat center/cover;
+    }
+    ul.img-slide>li:nth-child(4),
+    ul.img-slide>li:nth-child(4)>.bg-img {
+      background: url(./images/4.jpg) no-repeat center/cover;
+    }
+    ul>li>input[name="img"]:checked {
+      width: 500px;
+    }
+
+    ul.img-slide>li>.bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+      transition: .3s linear;
+      filter: blur(2px);   /*高斯模糊*/
+    }
+    ul>li>input[name="img"]:checked + .bg-img {
+      opacity: 1;
+    } 
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul class="img-slide">
+      <li>
+        <input type="radio" id="pic1" name="img">
+        <div class="bg-img"></div>
+      </li>
+      <li>
+        <input type="radio" id="pic2" name="img">
+        <div class="bg-img"></div>
+      </li>
+      <li>
+        <input type="radio" id="pic3" name="img" checked>
+        <div class="bg-img"></div>
+      </li>
+      <li>
+        <input type="radio" id="pic4" name="img">
+        <div class="bg-img"></div>
+      </li>
+    </ul>
+</body>
+</html>

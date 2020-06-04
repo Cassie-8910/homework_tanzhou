@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小绵羊-小企鹅Cassie</title>
+  <style>
+    body,ul,li,div {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #2691c9;
+    }
+    ul.sheep {
+      list-style: none;
+      width: 162.75px;
+    }
+    ul.sheep>li {
+      height: 122px;
+      background: url(./images/sheep.png) no-repeat;
+    }
+
+    ul.sheep>li:first-child,
+    ul.sheep>li:nth-child(3),
+    ul.sheep>li:nth-child(6) {
+      animation: run1 1s steps(7) infinite, /*原地踏步动画*/
+                 run2 1.5s linear infinite;   /*盒子运动动画*/
+    }
+    ul.sheep>li:nth-child(2) {
+      animation: run1 1s steps(7) infinite,
+                run2 2s linear infinite;
+    }
+    ul.sheep>li:nth-child(4)  {
+      animation: run1 1s steps(7) infinite, 
+                 run2 3s linear infinite;
+    }
+    ul.sheep>li:nth-child(5) {
+      animation: run1 1s steps(7) infinite,
+                 run2 3.5s linear infinite;
+    }
+    ul.sheep>li:hover {
+      animation-play-state: paused;
+      background-position-y: -122px;
+    }
+    @keyframes run1 {
+      0% {
+        background-position-x: 0%;
+      }
+      100% {
+        background-position-x: 100%;
+      }
+    }
+    @keyframes run2 {
+      0% {
+        transform: translateX(1200px);
+      }
+      100% {
+        transform: translateX(100px);
+      }
+    }
+  </style>
+</head>
+<body>
+    <ul class="sheep">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+</body>
+</html>

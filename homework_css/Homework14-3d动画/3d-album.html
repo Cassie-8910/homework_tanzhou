@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3d旋转相册-Cassie</title>
+  <style>
+    body{
+      margin: 0;
+      perspective: 3000px;
+    }
+    .album-3d {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: url(./images/bg1.jpg) center/cover no-repeat;
+      perspective: 3000px;
+    }
+    .container {
+      position: relative;
+      width: 150px;
+      height: 250px;
+      border: 3px solid #bdc3c7;
+      margin: 150px auto;
+      transform-style: preserve-3d;
+      animation: rotate 10s linear infinite;
+      background: url(./images/12.jpg) center/cover no-repeat;
+    }
+    @keyframes rotate {
+      0%{
+        transform: rotateX(-30deg);
+      }
+      100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+      }
+    }
+    .container>div {
+      position: absolute;
+      width: 150px;
+      height: 250px;
+    }
+    .container>div:first-child {
+      animation: anima1 1s linear forwards;
+      background: url(./images/1.jpg) center/cover no-repeat;
+    }
+    .container>div:nth-child(2) {
+      animation: anima2 1s linear .1s forwards;
+      background: url(./images/2.jpg) center/cover no-repeat;
+    }
+    .container>div:nth-child(3) {
+      animation: anima3 1s linear .2s forwards;
+      background: url(./images/3.jpg) center/cover no-repeat;
+    }
+    .container>div:nth-child(4) {
+      animation: anima4 1s linear .3s forwards;
+      background: url(./images/4.jpg) center/cover no-repeat;
+    }
+    .container>div:nth-child(5) {
+      animation: anima5 1s linear .4s forwards;
+      background: url(./images/5.jpg) center/cover no-repeat;
+    }
+    .container>div:nth-child(6) {
+      animation: anima6 1s linear .5s forwards;
+      background: url(./images/6.jpg) center/cover no-repeat;
+    } 
+    .container>div:nth-child(7) {
+      animation: anima7 1s linear .6s forwards;
+      background: url(./images/7.jpg) center/cover no-repeat;
+    } 
+    .container>div:nth-child(8) {
+      animation: anima8 1s linear .7s forwards;
+      background: url(./images/8.jpg) center/cover no-repeat;
+    }
+    .container>div:nth-child(9) {
+      animation: anima9 1s linear .8s forwards;
+      background: url(./images/9.jpg) center/cover no-repeat;
+    }
+    .container>div:last-child {
+      animation: anima10 1s linear .9s forwards;
+      background: url(./images/10.jpg) center/cover no-repeat;
+    } 
+
+    @keyframes anima1 {
+      0%{}
+      100% {
+        transform: translateZ(300px);
+      }
+    }
+    @keyframes anima2 {
+      0%{
+        transform: rotateY(36deg);
+      }
+      100% {
+        transform: rotateY(36deg) translateZ(300px);
+      }
+    }
+    @keyframes anima3 {
+      0%{
+        transform: rotateY(72deg);
+      }
+      100% {
+        transform: rotateY(72deg) translateZ(300px);
+      }
+    }
+    @keyframes anima4 {
+      0%{
+        transform: rotateY(108deg);
+      }
+      100% {
+        transform: rotateY(108deg) translateZ(300px);
+      }
+    }
+    @keyframes anima5 {
+      0%{
+        transform: rotateY(144deg);
+      }
+      100% {
+        transform: rotateY(144deg) translateZ(300px);
+      }
+    }
+    @keyframes anima6 {
+      0%{
+        transform: rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(180deg) translateZ(300px);
+      }
+    }
+    @keyframes anima7 {
+      0%{
+        transform: rotateY(-144deg);
+      }
+      100% {
+        transform: rotateY(-144deg) translateZ(300px);
+      }
+    }
+    @keyframes anima8 {
+      0%{
+        transform: rotateY(-108deg);
+      }
+      100% {
+        transform: rotateY(-108deg) translateZ(300px);
+      }
+    }
+    @keyframes anima9 {
+      0%{
+        transform: rotateY(-72deg);
+      }
+      100% {
+        transform: rotateY(-72deg) translateZ(300px);
+      }
+    }
+    @keyframes anima10 {
+      0%{
+        transform: rotateY(-36deg);
+      }
+      100% {
+        transform: rotateY(-36deg) translateZ(300px);
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="album-3d">
+    <div class="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</body>
+</html>

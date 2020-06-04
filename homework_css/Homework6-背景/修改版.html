@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework6-修改版</title>
+  <style>
+    body,h1,ul {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    .hot-list {
+      width: 270px;
+      height: 280px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      margin: 10px auto;
+    }
+    .hot-list>h1 {
+      font-size: 18px;
+      line-height: 40px;
+      border-bottom: 1px solid #ccc;
+    }
+    h1>.most {
+      font-size: 13px;
+      color: #ddd;
+    }
+    ul.list {
+      padding-top: 13px;
+      padding-left: 30px;
+      background: url(./bg-imgs/bg.png) no-repeat 0 20px;
+    }
+    ul.list>li {
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    .fix-icon {
+      width: 40px;
+      height: 220px;
+      padding: 20px 80px;
+      background-color: #252526;
+      margin: 10px auto;
+    }
+    ul.icon {
+      width: 40px;
+    }
+    ul.icon>li {
+      width: 40px;
+      height: 40px;
+      background-color: pink;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+    ul.icon>li {
+      background: url(./bg-imgs/1.png) no-repeat;
+      background-position: -80px -280px;
+    }
+    ul.icon>li:nth-child(2) {
+      background-position: 0 -200px;
+    }
+    ul.icon>li:nth-child(3) {
+      background-position: 0 -240px;
+    }
+    ul.icon>li:nth-child(4) {
+      background-position: 0 -320px;
+    }
+    ul.icon>li:last-child {
+      background-position: 0 0;
+      margin-bottom: 0;
+    }
+    ul.icon>li:hover {
+      background-position-x: -40px;
+    }
+    ul.icon>li:first-child:hover {
+      background-position-x: -120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hot-list">
+    <h1>潮流排行 <span class="most">Most Read</span></h1>
+    <ul class="list">
+      <li>秋冬拗造型 你也需要一款时髦...</li>
+      <li>屡登女富豪榜首川普女儿能..</li>
+      <li>英王室175年传家宝 男女出生必...</li>
+      <li>k帅穿裙装变美 天使AA换裤装男...</li>
+      <li>夏琳王妃美过10年前 ?穿Dior高...</li>
+      <li>东京红毯吹出强劲中国风吴亦凡.... </li>
+      <li>一场“最诗艺”的时尚秀</li>
+    </ul>
+  </div>
+
+  <div class="fix-icon">
+    <ul class="icon">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+</html>

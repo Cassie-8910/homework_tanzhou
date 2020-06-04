@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3d卡片-Cassie</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    div {
+      box-sizing: border-box;
+    }
+    h3 {
+      font-size: 20px;
+      color: #e67e22;
+      text-align: center;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #2c3e50;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 900px;
+      height: 300px;
+      margin: 50px auto 0;
+    }
+    .container>div {
+      width: 250px;
+      height: 250px;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+    .container>div>div {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      perspective: 5000px;
+    }
+    .content1,
+    .content2,
+    .content3 {
+      padding: 10px;
+      opacity: 0;
+      transform: rotateY(90deg);
+      background-color: rgba(0, 0, 0, .5);
+    }
+    .bg1 {
+      background: url(./images/lin2.jpg) center/cover no-repeat;
+    }
+    .bg2 {
+      background: url(./images/da.jpg) center/cover no-repeat;
+    }
+    .bg3 {
+      background: url(./images/bao1.webp) center/cover no-repeat;
+    }
+    .card1:hover>.bg1,
+    .card2:hover>.bg2,
+    .card3:hover>.bg3 {
+      animation: left-rotate1 1s linear forwards;
+    }
+    .card1:hover>.content1,
+    .card2:hover>.content2,
+    .card3:hover>.content3 {
+      animation: left-rotate2 1s linear forwards;
+    }
+    @keyframes left-rotate1 {
+      0%{}
+      100% {
+        transform: rotateY(-90deg);
+        opacity: .2;
+      }
+    }
+    @keyframes left-rotate2 {
+      0%{}
+      100% {
+        transform: rotateY(0deg);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card1">
+      <div class="content1">
+        <h3>葬花吟</h3>
+        <p>花谢花飞花满天，红消香断有谁怜？
+          游丝软系飘春榭，落絮轻沾扑绣帘。
+          闺中女儿惜春暮，愁绪满怀无释处。
+          手把花锄出绣帘，忍踏落花来复去。
+          柳丝榆荚自芳菲，不管桃飘与李飞；
+          桃李明年能再发，明年闺中知有谁？</p>
+      </div>
+      <div class="bg1"></div>
+    </div>
+    <div class="card2">
+      <div class="content2">
+        <h3>枉凝眉</h3>
+        <p>一个是阆苑仙葩，一个是美玉无瑕。
+          若说没奇缘，今生偏又遇着他；
+          若说有奇缘，如何心事终虚化？
+          一个枉自嗟呀，一个空劳牵挂。
+          一个是水中月，一个是镜中花。
+          想眼中能有多少泪珠儿，
+          怎禁得秋流到冬尽，春流到夏！</p>
+      </div>
+      <div class="bg2"></div>
+    </div>
+    <div class="card3">
+      <div class="content3">
+        <h3>芙蓉女儿诔</h3>
+        <p>维太平不易之元，蓉桂竞芳之月，无可奈何之日，
+          怡红院浊玉，谨以群花之蕊，冰鲛之縠，沁芳之泉，
+          枫露之茗，四者虽微，聊以达诚申信，
+          乃致祭于白帝宫中抚司秋艳芙蓉女儿之前曰：
+          窃思女儿自临浊世，迄今凡十有”六载。</p>
+      </div>
+      <div class="bg3"></div>
+    </div>
+  </div>
+</body>
+</html>

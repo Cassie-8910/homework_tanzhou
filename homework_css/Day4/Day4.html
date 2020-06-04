@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cassie--小企鹅</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .show1,
+    .show2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      float: left;
+      margin: 0 10px;
+      width: 280px;
+      height: 340px;
+      border: 1px solid #ddd;     
+    }
+    .intro {
+      font-size: 14px;
+      line-height: 28px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    .author,
+    .author+p {
+      font-size: 12px;
+      line-height: 24px;
+      color: #515355;
+    }
+    .author>span {
+      color: #FC427B;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+    }
+    ul>li>a {
+      text-decoration: none;
+      float: left;
+      font-size: 12px;
+      line-height: 24px;
+      color: #515355;
+      margin-right: 10px;
+    }
+    ul.clearfix::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    ul span {
+      color: #ff3f34;
+    }
+
+    .icon-play {
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="show1">
+    <div class="container">
+      <img src="./images/pic1.jpg" width="250" height="188">
+      <p class="intro">动画便利店X果壳网《西门子洗碗机》...</p>
+      <p class="author"><span>原创作品</span> - 影视 - Motion Graphic</p>
+      <p>3小时前上传</p>
+      <ul class="clearfix">
+        <li><a href="#"><span>1284</span></a></li>
+        <li><a href="#">人气/<span>11</span></a></li>
+        <li><a href="#">评论/<span>47</span></a></li>
+        <li><a href="#">推荐</a></li>
+      </ul>
+      <span class="icon-play"><img src="./images/play.png"></span>
+    </div>
+  </div>
+
+  <div class="show2">
+    <div class="container">
+      <img src="./images/pic2.jpg" width="250" height="188">
+      <p class="intro">动画便利店X果壳网《西门子洗碗机》...</p>
+      <p class="author"><span>原创作品</span> - 影视 - Motion Graphic</p>
+      <p>3小时前上传</p>
+      <ul class="clearfix">
+        <li><a href="#"><span>1284</span></a></li>
+        <li><a href="#">人气/<span>11</span></a></li>
+        <li><a href="#">评论/<span>47</span></a></li>
+        <li><a href="#">推荐</a></li>
+      </ul>
+      <span class="icon-play"><img src="./images/play.png"></span>
+    </div>
+  </div>
+
+</body>
+</html>

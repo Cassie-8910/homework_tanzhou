@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>摩天轮-小企鹅Cassie</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      width: 1000px;
+      height: 800px;
+      margin: 0 auto;
+      background: url(./images/bg.png) center/cover;
+    }
+    .wheel {
+      position: relative;
+      width: 768px;
+      height: 768px;
+      margin: 16px auto;
+      border-radius: 50%;
+      background: url(./images/fsw.png);
+      animation: spin 3s linear infinite;
+    }
+    .kid1 {
+      position: absolute;
+      left: 384px;
+      top: 0vpx;
+      width: 130px;
+      height: 170px;
+      transform-origin: 50% 50%;
+      background-image: url(./images/boy.png);
+      animation: kids 3s linear infinite;
+    }
+    .kid2 {
+      position: absolute;
+      left: 15px;
+      top: 384px;
+      width: 130px;
+      height: 170px;
+      transform-origin: 50% 50%;
+      background-image: url(./images/girl.png);
+      animation: kids 3s linear infinite;
+    }
+    .kid3 {
+      position: absolute;
+      right: 5px;
+      top: 400px;
+      width: 130px;
+      height: 170px;
+      transform-origin: 50% 50%;
+      background-image: url(./images/shamegirl.png);
+      animation: kids 3s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes kids{
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-360deg)
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wheel">
+      <div class="kid1"></div>
+      <div class="kid2"></div>  
+      <div class="kid3"></div>  
+    </div>
+  </div>
+</body>
+</html>

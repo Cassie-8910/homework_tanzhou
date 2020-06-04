@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小企鹅--Cassie</title>
+  <style>
+    body,form,input,label {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    .container {
+      width: 100%;
+      height: 520px;
+      margin: 0 auto;
+      background: url(./images/dlbg.jpg) -200px center no-repeat;
+    }
+    #login1 {
+      position: absolute;
+      width: 340px;
+      height: 415px;
+      top: 30px;
+      right: 100px;
+      padding-left: 40px;
+      padding-top: 40px;
+      background-color: #f5eae9;
+    }
+    .username,
+    .psw {
+      margin-bottom: 25px;
+    }
+    .username>img,
+    .psw>img {
+      /* float: left; */
+      vertical-align: middle;
+    }
+    .username>input,
+    .psw>input {
+      outline: none;
+      /* float: left; */
+      vertical-align: middle;
+      width: 215px;
+      height: 40px;
+      font-size: 16px;
+      padding-left: 5px;
+      border: 1px solid #eee;
+    }
+    .clearfix::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    #account {
+      vertical-align: -3px;
+    }
+    #account+label {
+      font-size: 12px;
+    }
+    .register {
+      display: inline-block;
+      margin-left: 75px;
+      font-size: 12px;
+    }
+
+    .login-in {
+      outline: none;
+      cursor: pointer;
+      width: 255px;
+      height: 40px;
+      margin: 25px 0 35px;
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 1em;
+      color: #fff;
+      border: none;
+      background: linear-gradient(#e9263a,#bb2b32);
+    }
+
+
+    #login2 {
+      position: relative;
+      width: 400px;
+      height: 350px;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px #ccc;
+    }
+    .inner-form {
+      position: relative;
+      margin-bottom: 15px;
+    }
+    .inner-form>label {
+      display: inline-block;
+      width: 70px;
+      margin-right: 10px;
+      text-align: right;
+    }
+    .inner-form>input {
+      width: 275px;
+      height: 40px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #eee;
+    }
+    .btn {
+      position: absolute;
+      right: 30px;
+    }
+    .btn>input {
+      cursor: pointer;
+      outline: none;
+      height: 30px;
+      margin-left: 15px;
+      padding: 0 15px;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      background-color: #3c6cb1;
+    }
+
+    .hint {
+      position: absolute;
+      display: none;
+      width: 250px;
+      height: 40px;
+      left: 390px;
+      top: 0;
+      line-height: 40px;
+      padding-left: 10px;
+      border-radius: 5px;
+      color: #fff;
+      background-color: #56a9d3;
+    }
+    .hint::before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      left: -10px;
+      top: 15px;
+      border: 5px solid #56a9d3;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+    }
+    .inner-form > .alert:focus + .hint {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- 要使img和input并列显示给他们分别设置vertical-aign：middle -->
+  <div class="container">
+    <form action="" id="login1">
+      <div class="username clearfix">
+        <img src="./images/zhanghao.jpg" width="40" height="40"><input type="text" placeholder="用户名/邮箱地址/手机号">
+      </div>
+      <div class="psw clearfix">
+        <img src="./images/mima.jpg" width="40" height="40"><input type="password" placeholder="填写密码">
+      </div>
+      <input type="checkbox" id="account" checked>
+      <label for="account">记住账号</label> 
+      <div class="register">
+        <a href="#">欢迎注册</a>
+        <a href="#">忘记密码?</a>
+      </div>
+
+      <input type="button" value="登录" class="login-in">
+      
+      <div class="other">
+        <label style="font-size: 14px;">合作网站账号登录：</label>
+        <img src="./images/weixin.png" width="32" height="32">
+        <img src="./images/qqlogin.png" width="32" height="32">
+        <img src="./images/taobao.png" width="32" height="32">
+      </div>
+    </form>
+  </div>
+
+  <form action="#" id="login2">
+    <div class="inner-form">
+      <label>user</label>
+      <input type="text" placeholder="请输入账号" class="alert" autofocus>
+      <span class="hint">用户名必须为4-16位数字或字母</span>
+    </div>
+    <div class="inner-form">
+      <label >password</label>
+      <input type="password" placeholder="密码">
+    </div>
+    <div class="inner-form">
+      <label for="">password</label>
+      <input type="password" placeholder="密码">
+    </div>
+    <div class="inner-form">
+      <label for="">email</label>
+      <input type="email" placeholder="请输入邮箱">
+    </div>
+    <div class="inner-form">
+      <label for="">nickname</label>
+      <input type="text" placeholder="昵称">
+    </div>
+
+    <div class="btn">
+      <input type="button" value="注册">
+      <input type="button" value="我有账号，我要登录">
+    </div>
+
+  </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阴阳师-小企鹅Cassie</title>
+  <style>
+    body,ul,div {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ul.img-list {
+      list-style: none;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    ul.img-list>li {
+      position: relative;
+      top: 50px;
+      cursor: pointer;
+      transition: top .2s cubic-bezier(.81,.3,.48,.82)
+    }
+    ul.img-list>li>img {
+      position: relative;
+      top: 0;
+      transition: .3s linear;
+    }
+    ul.img-list>li:hover {
+      top:0;
+    }
+    ul.img-list>li:hover>img {
+      top: -50px;
+    }
+  </style>
+</head>
+<body>
+  <ul class="img-list">
+    <li><img src="./images/1.gif" width="220" height="516"></li>
+    <li><img src="./images/2.png" width="220" height="516"></li>
+    <li><img src="./images/3.png" width="220" height="516"></li>
+    <li><img src="./images/4.png" width="220" height="516"></li>
+    <li><img src="./images/5.png" width="220" height="516"></li>
+  </ul>
+</body>
+</html>

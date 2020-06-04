@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>滚动的正方形-小企鹅</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .box {
+      position: relative;
+      width: 600px;
+      height: 300px;
+      border: 2px solid tomato;
+    }
+    .square {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      /* animation: roll1 1s linear,
+      roll2 1s linear 1s,
+      roll3 1s linear 2s,
+      roll4 1s linear 3s,
+      roll5 1s linear 4s; */
+      animation: spin 1s linear infinite,
+      move 5s steps(5) infinite;
+      transform-origin: 100% 100%;
+    }
+
+    @keyframes spin {
+      0%{
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(90deg);
+      }
+    }
+    @keyframes move {
+      0%{
+        left: 0;
+      }
+      100% {
+        left: 500px;
+      }
+    }
+
+
+    /* @keyframes roll1 {
+      0%{}
+      100% {
+        transform: rotate(90deg);
+      }
+    }
+    @keyframes roll2 {
+      0% {
+        transform: translateX(100px);
+      }
+      100% {
+        transform: translateX(100px) rotate(90deg);
+      }
+    }
+    @keyframes roll3 {
+      0% {
+        transform: translateX(200px);
+      }
+      100% {
+        transform: translateX(200px) rotate(90deg);
+      }
+    }
+    @keyframes roll4 {
+      0% {
+        transform: translateX(300px);
+      }
+      100% {
+        transform: translateX(300px) rotate(90deg);
+      }
+    }
+    @keyframes roll5 {
+      0% {
+        transform: translateX(400px);
+      }
+      100% {
+        transform: translateX(400px) rotate(90deg);
+      }
+    } */
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="square"></div>
+  </div>
+</body>
+</html>
